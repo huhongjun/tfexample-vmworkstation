@@ -1,0 +1,1367 @@
+2021-11-03T15:25:35.834+0800 [DEBUG] Adding temp file log sink: /tmp/terraform-log853198635
+2021-11-03T15:25:35.834+0800 [INFO]  Terraform version: 1.0.9
+2021-11-03T15:25:35.834+0800 [INFO]  Go runtime version: go1.16.4
+2021-11-03T15:25:35.834+0800 [INFO]  CLI args: []string{"/usr/local/bin/terraform", "apply", "-auto-approve"}
+2021-11-03T15:25:35.834+0800 [TRACE] Stdout is a terminal of width 130
+2021-11-03T15:25:35.834+0800 [TRACE] Stderr is a terminal of width 130
+2021-11-03T15:25:35.834+0800 [TRACE] Stdin is a terminal
+2021-11-03T15:25:35.834+0800 [DEBUG] Attempting to open CLI config file: /home/axe/workshop/tfexample-vmworkstation/dev.tfrc
+2021-11-03T15:25:35.834+0800 [INFO]  Loading CLI configuration from /home/axe/workshop/tfexample-vmworkstation/dev.tfrc
+2021-11-03T15:25:35.834+0800 [DEBUG] Not reading CLI config directory because config location is overridden by environment variable
+2021-11-03T15:25:35.834+0800 [DEBUG] Explicit provider installation configuration is set
+2021-11-03T15:25:35.834+0800 [TRACE] Selected provider installation method cliconfig.ProviderInstallationDirect with includes [] and excludes []
+2021-11-03T15:25:35.835+0800 [INFO]  CLI command args: []string{"apply", "-auto-approve"}
+2021-11-03T15:25:35.870+0800 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2021-11-03T15:25:35.870+0800 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2021-11-03T15:25:35.870+0800 [DEBUG] New state was assigned lineage "e5ed88f5-b98a-bdcc-03b9-b84e06772112"
+2021-11-03T15:25:35.870+0800 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2021-11-03T15:25:35.870+0800 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2021-11-03T15:25:35.870+0800 [TRACE] providercache.fillMetaCache: scanning directory .terraform/providers
+2021-11-03T15:25:35.870+0800 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/elsudano/vmworkstation v0.2.3 for linux_amd64 at .terraform/providers/registry.terraform.io/elsudano/vmworkstation/0.2.3/linux_amd64
+2021-11-03T15:25:35.870+0800 [TRACE] providercache.fillMetaCache: including .terraform/providers/registry.terraform.io/elsudano/vmworkstation/0.2.3/linux_amd64 as a candidate package for registry.terraform.io/elsudano/vmworkstation 0.2.3
+2021-11-03T15:25:35.927+0800 [DEBUG] Provider registry.terraform.io/elsudano/vmworkstation is overridden to load from /home/axe/workshop/terraform-provider-vmworkstation
+2021-11-03T15:25:35.927+0800 [DEBUG] checking for provisioner in "."
+2021-11-03T15:25:35.927+0800 [DEBUG] checking for provisioner in "/usr/local/bin"
+2021-11-03T15:25:35.927+0800 [INFO]  Failed to read plugin lock file .terraform/plugins/linux_amd64/lock.json: open .terraform/plugins/linux_amd64/lock.json: no such file or directory
+2021-11-03T15:25:35.927+0800 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2021-11-03T15:25:35.928+0800 [INFO]  backend/local: starting Apply operation
+2021-11-03T15:25:35.928+0800 [TRACE] backend/local: requesting state manager for workspace "default"
+2021-11-03T15:25:35.928+0800 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2021-11-03T15:25:35.928+0800 [TRACE] backend/local: requesting state lock for workspace "default"
+2021-11-03T15:25:35.928+0800 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2021-11-03T15:25:35.928+0800 [TRACE] statemgr.Filesystem: existing snapshot has lineage "7c799cb3-96f8-376e-aeac-0637969163b6" serial 1
+2021-11-03T15:25:35.928+0800 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2021-11-03T15:25:35.928+0800 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2021-11-03T15:25:35.928+0800 [TRACE] backend/local: reading remote state for workspace "default"
+2021-11-03T15:25:35.928+0800 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2021-11-03T15:25:35.928+0800 [TRACE] statemgr.Filesystem: read snapshot with lineage "7c799cb3-96f8-376e-aeac-0637969163b6" serial 1
+2021-11-03T15:25:35.928+0800 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2021-11-03T15:25:35.928+0800 [TRACE] backend/local: building context for current working directory
+2021-11-03T15:25:35.928+0800 [TRACE] terraform.NewContext: starting
+2021-11-03T15:25:35.929+0800 [TRACE] terraform.NewContext: loading provider schemas
+2021-11-03T15:25:35.929+0800 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/elsudano/vmworkstation"
+2021-11-03T15:25:35.929+0800 [DEBUG] created provider logger: level=trace
+2021-11-03T15:25:35.929+0800 [INFO]  provider: configuring client automatic mTLS
+2021-11-03T15:25:35.978+0800 [DEBUG] provider: starting plugin: path=/home/axe/workshop/terraform-provider-vmworkstation/terraform-provider-vmworkstation_v0.2.3 args=[/home/axe/workshop/terraform-provider-vmworkstation/terraform-provider-vmworkstation_v0.2.3]
+2021-11-03T15:25:35.978+0800 [DEBUG] provider: plugin started: path=/home/axe/workshop/terraform-provider-vmworkstation/terraform-provider-vmworkstation_v0.2.3 pid=14173
+2021-11-03T15:25:35.978+0800 [DEBUG] provider: waiting for RPC address: path=/home/axe/workshop/terraform-provider-vmworkstation/terraform-provider-vmworkstation_v0.2.3
+2021-11-03T15:25:35.983+0800 [INFO]  provider.terraform-provider-vmworkstation_v0.2.3: configuring server automatic mTLS: timestamp=2021-11-03T15:25:35.983+0800
+2021-11-03T15:25:36.033+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: plugin address: address=/tmp/plugin355921896 network=unix timestamp=2021-11-03T15:25:36.033+0800
+2021-11-03T15:25:36.033+0800 [DEBUG] provider: using plugin: version=5
+2021-11-03T15:25:36.080+0800 [TRACE] GRPCProvider: GetProviderSchema
+2021-11-03T15:25:36.080+0800 [TRACE] provider.stdio: waiting for stdio data
+2021-11-03T15:25:36.081+0800 [TRACE] GRPCProvider: Close
+2021-11-03T15:25:36.082+0800 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-11-03T15:25:36.083+0800 [DEBUG] provider: plugin process exited: path=/home/axe/workshop/terraform-provider-vmworkstation/terraform-provider-vmworkstation_v0.2.3 pid=14173
+2021-11-03T15:25:36.083+0800 [DEBUG] provider: plugin exited
+2021-11-03T15:25:36.083+0800 [TRACE] terraform.NewContext: complete
+2021-11-03T15:25:36.083+0800 [TRACE] backend/local: finished building terraform.Context
+2021-11-03T15:25:36.083+0800 [TRACE] backend/local: requesting interactive input, if necessary
+2021-11-03T15:25:36.083+0800 [TRACE] Context.Input: Prompting for provider arguments
+2021-11-03T15:25:36.083+0800 [TRACE] Context.Input: Provider provider.vmworkstation declared at main.tf:10,1-25
+2021-11-03T15:25:36.083+0800 [TRACE] Context.Input: Input for provider.vmworkstation: map[string]cty.Value{}
+2021-11-03T15:25:36.083+0800 [TRACE] backend/local: running validation operation
+2021-11-03T15:25:36.083+0800 [INFO]  terraform: building graph: GraphTypeValidate
+2021-11-03T15:25:36.083+0800 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2021-11-03T15:25:36.083+0800 [TRACE] ConfigTransformer: Starting for path:
+2021-11-03T15:25:36.083+0800 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+  ------
+2021-11-03T15:25:36.083+0800 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2021-11-03T15:25:36.083+0800 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+  ------
+2021-11-03T15:25:36.083+0800 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2021-11-03T15:25:36.083+0800 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2021-11-03T15:25:36.083+0800 [TRACE] Executing graph transform *terraform.LocalTransformer
+2021-11-03T15:25:36.083+0800 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2021-11-03T15:25:36.083+0800 [TRACE] Executing graph transform *terraform.OutputTransformer
+2021-11-03T15:25:36.083+0800 [TRACE] OutputTransformer: adding instance_id as *terraform.NodeApplyableOutput
+2021-11-03T15:25:36.083+0800 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  output.instance_id - *terraform.NodeApplyableOutput
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+  ------
+2021-11-03T15:25:36.083+0800 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2021-11-03T15:25:36.083+0800 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2021-11-03T15:25:36.083+0800 [TRACE] Executing graph transform *terraform.StateTransformer
+2021-11-03T15:25:36.083+0800 [TRACE] StateTransformer: state is empty, so nothing to do
+2021-11-03T15:25:36.083+0800 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2021-11-03T15:25:36.083+0800 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021-11-03T15:25:36.083+0800 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021-11-03T15:25:36.083+0800 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2021-11-03T15:25:36.083+0800 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2021-11-03T15:25:36.083+0800 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021-11-03T15:25:36.083+0800 [TRACE] AttachResourceConfigTransformer: attaching to "vmworkstation_vm.test_machine" (*terraform.NodeValidatableResource) config from main.tf:18,1-43
+2021-11-03T15:25:36.083+0800 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to vmworkstation_vm.test_machine
+2021-11-03T15:25:36.083+0800 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021-11-03T15:25:36.083+0800 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021-11-03T15:25:36.083+0800 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021-11-03T15:25:36.083+0800 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/elsudano/vmworkstation\"]" provider configuration from main.tf:10,1-25
+2021-11-03T15:25:36.084+0800 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  output.instance_id - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+  ------
+2021-11-03T15:25:36.084+0800 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021-11-03T15:25:36.084+0800 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021-11-03T15:25:36.084+0800 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021-11-03T15:25:36.084+0800 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/elsudano/vmworkstation"] serving vmworkstation_vm.test_machine
+2021-11-03T15:25:36.084+0800 [DEBUG] ProviderTransformer: "vmworkstation_vm.test_machine" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/elsudano/vmworkstation"]
+2021-11-03T15:25:36.084+0800 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  output.instance_id - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+  ------
+2021-11-03T15:25:36.084+0800 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021-11-03T15:25:36.084+0800 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2021-11-03T15:25:36.084+0800 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  output.instance_id - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+  ------
+2021-11-03T15:25:36.084+0800 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2021-11-03T15:25:36.084+0800 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2021-11-03T15:25:36.084+0800 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2021-11-03T15:25:36.084+0800 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/elsudano/vmworkstation"]
+2021-11-03T15:25:36.084+0800 [TRACE] AttachSchemaTransformer: attaching resource schema to vmworkstation_vm.test_machine
+2021-11-03T15:25:36.084+0800 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2021-11-03T15:25:36.084+0800 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2021-11-03T15:25:36.084+0800 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2021-11-03T15:25:36.084+0800 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021-11-03T15:25:36.084+0800 [DEBUG] ReferenceTransformer: "vmworkstation_vm.test_machine" references: [var.vmws_resource_frontend_description var.vmws_resource_frontend_memory var.vmws_resource_frontend_path var.vmws_resource_frontend_processors var.vmws_resource_frontend_sourceid var.Iname]
+2021-11-03T15:25:36.084+0800 [DEBUG] ReferenceTransformer: "var.Iname" references: []
+2021-11-03T15:25:36.084+0800 [DEBUG] ReferenceTransformer: "var.vmws_user" references: []
+2021-11-03T15:25:36.084+0800 [DEBUG] ReferenceTransformer: "var.vmws_resource_frontend_processors" references: []
+2021-11-03T15:25:36.084+0800 [DEBUG] ReferenceTransformer: "var.vmws_password" references: []
+2021-11-03T15:25:36.084+0800 [DEBUG] ReferenceTransformer: "output.instance_id" references: [vmworkstation_vm.test_machine]
+2021-11-03T15:25:36.084+0800 [DEBUG] ReferenceTransformer: "var.vmws_url" references: []
+2021-11-03T15:25:36.084+0800 [DEBUG] ReferenceTransformer: "var.vmws_resource_frontend_path" references: []
+2021-11-03T15:25:36.084+0800 [DEBUG] ReferenceTransformer: "var.vmws_resource_frontend_memory" references: []
+2021-11-03T15:25:36.084+0800 [DEBUG] ReferenceTransformer: "var.vmws_resource_frontend_sourceid" references: []
+2021-11-03T15:25:36.084+0800 [DEBUG] ReferenceTransformer: "var.vmws_resource_frontend_description" references: []
+2021-11-03T15:25:36.084+0800 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/elsudano/vmworkstation\"]" references: [var.vmws_password var.vmws_url var.vmws_user]
+2021-11-03T15:25:36.084+0800 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  output.instance_id - *terraform.NodeApplyableOutput
+    vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  ------
+2021-11-03T15:25:36.084+0800 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2021-11-03T15:25:36.084+0800 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2021-11-03T15:25:36.084+0800 [TRACE] Executing graph transform *terraform.attachDataResourceDependsOnTransformer
+2021-11-03T15:25:36.084+0800 [TRACE] Completed graph transform *terraform.attachDataResourceDependsOnTransformer (no changes)
+2021-11-03T15:25:36.084+0800 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021-11-03T15:25:36.084+0800 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021-11-03T15:25:36.084+0800 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2021-11-03T15:25:36.084+0800 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2021-11-03T15:25:36.084+0800 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2021-11-03T15:25:36.085+0800 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.instance_id - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+    vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+  output.instance_id - *terraform.NodeApplyableOutput
+    vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  ------
+2021-11-03T15:25:36.085+0800 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2021-11-03T15:25:36.085+0800 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.instance_id - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+    vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+  output.instance_id - *terraform.NodeApplyableOutput
+    vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+  provider["registry.terraform.io/elsudano/vmworkstation"] (close) - *terraform.graphNodeCloseProvider
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  ------
+2021-11-03T15:25:36.085+0800 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021-11-03T15:25:36.085+0800 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.instance_id - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+    vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+  output.instance_id - *terraform.NodeApplyableOutput
+    vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+  provider["registry.terraform.io/elsudano/vmworkstation"] (close) - *terraform.graphNodeCloseProvider
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/elsudano/vmworkstation"] (close) - *terraform.graphNodeCloseProvider
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  ------
+2021-11-03T15:25:36.085+0800 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2021-11-03T15:25:36.085+0800 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.instance_id - *terraform.NodeApplyableOutput
+  output.instance_id - *terraform.NodeApplyableOutput
+    vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+  provider["registry.terraform.io/elsudano/vmworkstation"] (close) - *terraform.graphNodeCloseProvider
+    vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/elsudano/vmworkstation"] (close) - *terraform.graphNodeCloseProvider
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  ------
+2021-11-03T15:25:36.085+0800 [DEBUG] Starting graph walk: walkValidate
+2021-11-03T15:25:36.085+0800 [TRACE] vertex "var.vmws_url": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.085+0800 [TRACE] vertex "var.vmws_resource_frontend_memory": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.085+0800 [TRACE] vertex "var.vmws_resource_frontend_path": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.085+0800 [TRACE] vertex "var.vmws_resource_frontend_path": visit complete
+2021-11-03T15:25:36.085+0800 [TRACE] vertex "var.vmws_url": visit complete
+2021-11-03T15:25:36.085+0800 [TRACE] vertex "var.vmws_resource_frontend_description": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.085+0800 [TRACE] vertex "var.vmws_resource_frontend_description": visit complete
+2021-11-03T15:25:36.085+0800 [TRACE] vertex "var.vmws_resource_frontend_processors": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.085+0800 [TRACE] vertex "var.vmws_resource_frontend_processors": visit complete
+2021-11-03T15:25:36.085+0800 [TRACE] vertex "var.Iname": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.085+0800 [TRACE] vertex "var.Iname": visit complete
+2021-11-03T15:25:36.085+0800 [TRACE] vertex "var.vmws_resource_frontend_memory": visit complete
+2021-11-03T15:25:36.085+0800 [TRACE] vertex "var.vmws_user": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.085+0800 [TRACE] vertex "var.vmws_user": visit complete
+2021-11-03T15:25:36.085+0800 [TRACE] vertex "var.vmws_resource_frontend_sourceid": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.085+0800 [TRACE] vertex "var.vmws_resource_frontend_sourceid": visit complete
+2021-11-03T15:25:36.085+0800 [TRACE] vertex "var.vmws_password": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.085+0800 [TRACE] vertex "var.vmws_password": visit complete
+2021-11-03T15:25:36.085+0800 [TRACE] vertex "provider[\"registry.terraform.io/elsudano/vmworkstation\"]": starting visit (*terraform.NodeApplyableProvider)
+2021-11-03T15:25:36.086+0800 [DEBUG] created provider logger: level=trace
+2021-11-03T15:25:36.086+0800 [INFO]  provider: configuring client automatic mTLS
+2021-11-03T15:25:36.121+0800 [DEBUG] provider: starting plugin: path=/home/axe/workshop/terraform-provider-vmworkstation/terraform-provider-vmworkstation_v0.2.3 args=[/home/axe/workshop/terraform-provider-vmworkstation/terraform-provider-vmworkstation_v0.2.3]
+2021-11-03T15:25:36.121+0800 [DEBUG] provider: plugin started: path=/home/axe/workshop/terraform-provider-vmworkstation/terraform-provider-vmworkstation_v0.2.3 pid=14187
+2021-11-03T15:25:36.121+0800 [DEBUG] provider: waiting for RPC address: path=/home/axe/workshop/terraform-provider-vmworkstation/terraform-provider-vmworkstation_v0.2.3
+2021-11-03T15:25:36.126+0800 [INFO]  provider.terraform-provider-vmworkstation_v0.2.3: configuring server automatic mTLS: timestamp=2021-11-03T15:25:36.125+0800
+2021-11-03T15:25:36.151+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: plugin address: address=/tmp/plugin670311690 network=unix timestamp=2021-11-03T15:25:36.151+0800
+2021-11-03T15:25:36.151+0800 [DEBUG] provider: using plugin: version=5
+2021-11-03T15:25:36.199+0800 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/elsudano/vmworkstation\"]" provider for provider["registry.terraform.io/elsudano/vmworkstation"]
+2021-11-03T15:25:36.199+0800 [TRACE] provider.stdio: waiting for stdio data
+2021-11-03T15:25:36.199+0800 [TRACE] buildProviderConfig for provider["registry.terraform.io/elsudano/vmworkstation"]: using explicit config only
+2021-11-03T15:25:36.199+0800 [TRACE] GRPCProvider: GetProviderSchema
+2021-11-03T15:25:36.199+0800 [TRACE] GRPCProvider: ValidateProviderConfig
+2021-11-03T15:25:36.200+0800 [TRACE] vertex "provider[\"registry.terraform.io/elsudano/vmworkstation\"]": visit complete
+2021-11-03T15:25:36.200+0800 [TRACE] vertex "vmworkstation_vm.test_machine": starting visit (*terraform.NodeValidatableResource)
+2021-11-03T15:25:36.200+0800 [TRACE] GRPCProvider: ValidateResourceConfig
+2021-11-03T15:25:36.200+0800 [TRACE] vertex "vmworkstation_vm.test_machine": visit complete
+2021-11-03T15:25:36.200+0800 [TRACE] vertex "output.instance_id": starting visit (*terraform.NodeApplyableOutput)
+2021-11-03T15:25:36.200+0800 [TRACE] vertex "provider[\"registry.terraform.io/elsudano/vmworkstation\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2021-11-03T15:25:36.200+0800 [TRACE] GRPCProvider: Close
+2021-11-03T15:25:36.200+0800 [TRACE] setValue: Saving Create change for output.instance_id in changeset
+2021-11-03T15:25:36.200+0800 [TRACE] setValue: Removing output.instance_id from state (it is now null)
+2021-11-03T15:25:36.200+0800 [TRACE] vertex "output.instance_id": visit complete
+2021-11-03T15:25:36.200+0800 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2021-11-03T15:25:36.200+0800 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2021-11-03T15:25:36.200+0800 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-11-03T15:25:36.203+0800 [DEBUG] provider: plugin process exited: path=/home/axe/workshop/terraform-provider-vmworkstation/terraform-provider-vmworkstation_v0.2.3 pid=14187
+2021-11-03T15:25:36.203+0800 [DEBUG] provider: plugin exited
+2021-11-03T15:25:36.203+0800 [TRACE] vertex "provider[\"registry.terraform.io/elsudano/vmworkstation\"] (close)": visit complete
+2021-11-03T15:25:36.203+0800 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2021-11-03T15:25:36.203+0800 [TRACE] vertex "root": visit complete
+2021-11-03T15:25:36.203+0800 [INFO]  backend/local: apply calling Plan
+2021-11-03T15:25:36.203+0800 [INFO]  terraform: building graph: GraphTypePlan
+2021-11-03T15:25:36.203+0800 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2021-11-03T15:25:36.203+0800 [TRACE] ConfigTransformer: Starting for path:
+2021-11-03T15:25:36.203+0800 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+  ------
+2021-11-03T15:25:36.203+0800 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2021-11-03T15:25:36.203+0800 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+  ------
+2021-11-03T15:25:36.203+0800 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2021-11-03T15:25:36.203+0800 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2021-11-03T15:25:36.203+0800 [TRACE] Executing graph transform *terraform.LocalTransformer
+2021-11-03T15:25:36.203+0800 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2021-11-03T15:25:36.203+0800 [TRACE] Executing graph transform *terraform.OutputTransformer
+2021-11-03T15:25:36.203+0800 [TRACE] OutputTransformer: adding instance_id as *terraform.NodeApplyableOutput
+2021-11-03T15:25:36.203+0800 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  output.instance_id - *terraform.NodeApplyableOutput
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+  ------
+2021-11-03T15:25:36.203+0800 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2021-11-03T15:25:36.203+0800 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2021-11-03T15:25:36.203+0800 [TRACE] Executing graph transform *terraform.StateTransformer
+2021-11-03T15:25:36.203+0800 [TRACE] StateTransformer: state is empty, so nothing to do
+2021-11-03T15:25:36.203+0800 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2021-11-03T15:25:36.203+0800 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021-11-03T15:25:36.203+0800 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021-11-03T15:25:36.203+0800 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2021-11-03T15:25:36.203+0800 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2021-11-03T15:25:36.203+0800 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021-11-03T15:25:36.203+0800 [TRACE] AttachResourceConfigTransformer: attaching to "vmworkstation_vm.test_machine (expand)" (*terraform.nodeExpandPlannableResource) config from main.tf:18,1-43
+2021-11-03T15:25:36.204+0800 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to vmworkstation_vm.test_machine (expand)
+2021-11-03T15:25:36.204+0800 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021-11-03T15:25:36.204+0800 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021-11-03T15:25:36.204+0800 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021-11-03T15:25:36.204+0800 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/elsudano/vmworkstation\"]" provider configuration from main.tf:10,1-25
+2021-11-03T15:25:36.204+0800 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  output.instance_id - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+  ------
+2021-11-03T15:25:36.204+0800 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021-11-03T15:25:36.204+0800 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021-11-03T15:25:36.204+0800 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021-11-03T15:25:36.204+0800 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/elsudano/vmworkstation"] serving vmworkstation_vm.test_machine (expand)
+2021-11-03T15:25:36.204+0800 [DEBUG] ProviderTransformer: "vmworkstation_vm.test_machine (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/elsudano/vmworkstation"]
+2021-11-03T15:25:36.204+0800 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  output.instance_id - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+  ------
+2021-11-03T15:25:36.204+0800 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021-11-03T15:25:36.204+0800 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2021-11-03T15:25:36.204+0800 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  output.instance_id - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+  ------
+2021-11-03T15:25:36.204+0800 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2021-11-03T15:25:36.204+0800 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2021-11-03T15:25:36.204+0800 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2021-11-03T15:25:36.204+0800 [TRACE] AttachSchemaTransformer: attaching resource schema to vmworkstation_vm.test_machine (expand)
+2021-11-03T15:25:36.204+0800 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/elsudano/vmworkstation"]
+2021-11-03T15:25:36.204+0800 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2021-11-03T15:25:36.204+0800 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2021-11-03T15:25:36.204+0800 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2021-11-03T15:25:36.204+0800 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021-11-03T15:25:36.204+0800 [DEBUG] ReferenceTransformer: "output.instance_id" references: [vmworkstation_vm.test_machine (expand)]
+2021-11-03T15:25:36.204+0800 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/elsudano/vmworkstation\"]" references: [var.vmws_password var.vmws_url var.vmws_user]
+2021-11-03T15:25:36.204+0800 [DEBUG] ReferenceTransformer: "var.vmws_resource_frontend_description" references: []
+2021-11-03T15:25:36.204+0800 [DEBUG] ReferenceTransformer: "var.vmws_resource_frontend_processors" references: []
+2021-11-03T15:25:36.204+0800 [DEBUG] ReferenceTransformer: "var.vmws_resource_frontend_path" references: []
+2021-11-03T15:25:36.204+0800 [DEBUG] ReferenceTransformer: "var.vmws_resource_frontend_memory" references: []
+2021-11-03T15:25:36.204+0800 [DEBUG] ReferenceTransformer: "var.vmws_user" references: []
+2021-11-03T15:25:36.204+0800 [DEBUG] ReferenceTransformer: "var.vmws_url" references: []
+2021-11-03T15:25:36.204+0800 [DEBUG] ReferenceTransformer: "vmworkstation_vm.test_machine (expand)" references: [var.vmws_resource_frontend_memory var.vmws_resource_frontend_path var.vmws_resource_frontend_processors var.vmws_resource_frontend_sourceid var.Iname var.vmws_resource_frontend_description]
+2021-11-03T15:25:36.204+0800 [DEBUG] ReferenceTransformer: "var.vmws_resource_frontend_sourceid" references: []
+2021-11-03T15:25:36.204+0800 [DEBUG] ReferenceTransformer: "var.vmws_password" references: []
+2021-11-03T15:25:36.204+0800 [DEBUG] ReferenceTransformer: "var.Iname" references: []
+2021-11-03T15:25:36.204+0800 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  output.instance_id - *terraform.NodeApplyableOutput
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  ------
+2021-11-03T15:25:36.204+0800 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2021-11-03T15:25:36.204+0800 [TRACE] AttachDependenciesTransformer: vmworkstation_vm.test_machine depends on []
+2021-11-03T15:25:36.204+0800 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2021-11-03T15:25:36.204+0800 [TRACE] Executing graph transform *terraform.attachDataResourceDependsOnTransformer
+2021-11-03T15:25:36.204+0800 [TRACE] Completed graph transform *terraform.attachDataResourceDependsOnTransformer (no changes)
+2021-11-03T15:25:36.204+0800 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021-11-03T15:25:36.204+0800 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021-11-03T15:25:36.204+0800 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2021-11-03T15:25:36.204+0800 [TRACE] ForcedCBDTransformer: "vmworkstation_vm.test_machine (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2021-11-03T15:25:36.204+0800 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2021-11-03T15:25:36.204+0800 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2021-11-03T15:25:36.204+0800 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.instance_id - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+  output.instance_id - *terraform.NodeApplyableOutput
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  ------
+2021-11-03T15:25:36.204+0800 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2021-11-03T15:25:36.204+0800 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.instance_id - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+  output.instance_id - *terraform.NodeApplyableOutput
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+  provider["registry.terraform.io/elsudano/vmworkstation"] (close) - *terraform.graphNodeCloseProvider
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  ------
+2021-11-03T15:25:36.204+0800 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021-11-03T15:25:36.205+0800 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.instance_id - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+  output.instance_id - *terraform.NodeApplyableOutput
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+  provider["registry.terraform.io/elsudano/vmworkstation"] (close) - *terraform.graphNodeCloseProvider
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/elsudano/vmworkstation"] (close) - *terraform.graphNodeCloseProvider
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  ------
+2021-11-03T15:25:36.205+0800 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2021-11-03T15:25:36.205+0800 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.instance_id - *terraform.NodeApplyableOutput
+  output.instance_id - *terraform.NodeApplyableOutput
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+  provider["registry.terraform.io/elsudano/vmworkstation"] (close) - *terraform.graphNodeCloseProvider
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/elsudano/vmworkstation"] (close) - *terraform.graphNodeCloseProvider
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  ------
+2021-11-03T15:25:36.205+0800 [DEBUG] Starting graph walk: walkPlan
+2021-11-03T15:25:36.205+0800 [TRACE] vertex "var.Iname": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.205+0800 [TRACE] vertex "var.vmws_resource_frontend_description": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.205+0800 [TRACE] vertex "var.vmws_url": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.205+0800 [TRACE] vertex "var.vmws_url": visit complete
+2021-11-03T15:25:36.205+0800 [TRACE] vertex "var.vmws_resource_frontend_path": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.205+0800 [TRACE] vertex "var.vmws_resource_frontend_path": visit complete
+2021-11-03T15:25:36.205+0800 [TRACE] vertex "var.Iname": visit complete
+2021-11-03T15:25:36.205+0800 [TRACE] vertex "var.vmws_user": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.205+0800 [TRACE] vertex "var.vmws_user": visit complete
+2021-11-03T15:25:36.205+0800 [TRACE] vertex "var.vmws_resource_frontend_sourceid": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.205+0800 [TRACE] vertex "var.vmws_resource_frontend_sourceid": visit complete
+2021-11-03T15:25:36.205+0800 [TRACE] vertex "var.vmws_resource_frontend_processors": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.205+0800 [TRACE] vertex "var.vmws_resource_frontend_processors": visit complete
+2021-11-03T15:25:36.205+0800 [TRACE] vertex "var.vmws_password": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.205+0800 [TRACE] vertex "var.vmws_password": visit complete
+2021-11-03T15:25:36.205+0800 [TRACE] vertex "var.vmws_resource_frontend_memory": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.205+0800 [TRACE] vertex "var.vmws_resource_frontend_memory": visit complete
+2021-11-03T15:25:36.205+0800 [TRACE] vertex "var.vmws_resource_frontend_description": visit complete
+2021-11-03T15:25:36.205+0800 [TRACE] vertex "provider[\"registry.terraform.io/elsudano/vmworkstation\"]": starting visit (*terraform.NodeApplyableProvider)
+2021-11-03T15:25:36.205+0800 [DEBUG] created provider logger: level=trace
+2021-11-03T15:25:36.205+0800 [INFO]  provider: configuring client automatic mTLS
+2021-11-03T15:25:36.240+0800 [DEBUG] provider: starting plugin: path=/home/axe/workshop/terraform-provider-vmworkstation/terraform-provider-vmworkstation_v0.2.3 args=[/home/axe/workshop/terraform-provider-vmworkstation/terraform-provider-vmworkstation_v0.2.3]
+2021-11-03T15:25:36.240+0800 [DEBUG] provider: plugin started: path=/home/axe/workshop/terraform-provider-vmworkstation/terraform-provider-vmworkstation_v0.2.3 pid=14202
+2021-11-03T15:25:36.240+0800 [DEBUG] provider: waiting for RPC address: path=/home/axe/workshop/terraform-provider-vmworkstation/terraform-provider-vmworkstation_v0.2.3
+2021-11-03T15:25:36.243+0800 [INFO]  provider.terraform-provider-vmworkstation_v0.2.3: configuring server automatic mTLS: timestamp=2021-11-03T15:25:36.243+0800
+2021-11-03T15:25:36.269+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: plugin address: network=unix address=/tmp/plugin961294998 timestamp=2021-11-03T15:25:36.269+0800
+2021-11-03T15:25:36.273+0800 [DEBUG] provider: using plugin: version=5
+2021-11-03T15:25:36.319+0800 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/elsudano/vmworkstation\"]" provider for provider["registry.terraform.io/elsudano/vmworkstation"]
+2021-11-03T15:25:36.319+0800 [TRACE] provider.stdio: waiting for stdio data
+2021-11-03T15:25:36.319+0800 [TRACE] buildProviderConfig for provider["registry.terraform.io/elsudano/vmworkstation"]: using explicit config only
+2021-11-03T15:25:36.320+0800 [TRACE] GRPCProvider: GetProviderSchema
+2021-11-03T15:25:36.320+0800 [TRACE] GRPCProvider: ValidateProviderConfig
+2021-11-03T15:25:36.321+0800 [TRACE] GRPCProvider: ConfigureProvider
+2021-11-03T15:25:36.321+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [WSAPICLI] Fi: wsapiclient.go Fu: ConfigCli Obj:Variables "https://127.0.0.1:8697/api", "admin", "Huhj1234@", true
+2021-11-03T15:25:36.321+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [WSAPICLI] Fi: wsapiclient.go Fu: ConfigCli Obj:&url.URL{Scheme:"https", Opaque:"", User:(*url.Userinfo)(nil), Host:"127.0.0.1:8697", Path:"/api", RawPath:"", ForceQuery:false, RawQuery:"", Fragment:""}
+2021-11-03T15:25:36.321+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [WSAPICLI] Fi: wsapiclient.go Fu: ConfigCli Obj:"admin"
+2021-11-03T15:25:36.321+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [WSAPICLI] Fi: wsapiclient.go Fu: ConfigCli Obj:"Huhj1234@"
+2021-11-03T15:25:36.321+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [WSAPICLI] Fi: wsapiclient.go Fu: ConfigCli Obj:true
+2021-11-03T15:25:36.321+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [WSAPICLI] Fi: wsapiclient.go Fu: ConfigCli Obj:true
+2021-11-03T15:25:36.321+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [VMWS] Fi: config.go Fu: Client Obj: client before &wsapiclient.Client{Client:(*http.Client)(0xc0000a0c00), BaseURL:(*url.URL)(0xc000542200), User:"admin", Password:"Huhj1234@", InsecureFlag:true, Debug:true}
+2021-11-03T15:25:36.321+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [VMWS] Fi: provider.go Fu: providerConfigure Obj:&schema.ResourceData{schema:map[string]*schema.Schema{"debug":(*schema.Schema)(0xc0001ee500), "https":(*schema.Schema)(0xc0001ee400), "password":(*schema.Schema)(0xc0001ee200), "url":(*schema.Schema)(0xc0001ee300), "user":(*schema.Schema)(0xc0001ee100)}, config:(*terraform.ResourceConfig)(nil), state:(*terraform.InstanceState)(nil), diff:(*terraform.InstanceDiff)(0xc0005b02a0), meta:map[string]interface {}(nil), timeouts:(*schema.ResourceTimeout)(nil), providerMeta:cty.Value{ty:cty.Type{typeImpl:cty.typeImpl(nil)}, v:interface {}(nil)}, multiReader:(*schema.MultiLevelFieldReader)(0xc0005b03a0), setWriter:(*schema.MapFieldWriter)(0xc0005b0320), newState:(*terraform.InstanceState)(0xc00014e150), partial:false, partialMap:map[string]struct {}(nil), once:sync.Once{done:0x1, m:sync.Mutex{state:0, sema:0x0}}, isNew:false, panicOnError:false}
+2021-11-03T15:25:36.321+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [VMWS] Fi: provider.go Fu: providerConfigure Obj:&vmworkstation.Config{User:"admin", Password:"Huhj1234@", URL:"https://127.0.0.1:8697/api", InsecureFlag:true, Debug:true}
+2021-11-03T15:25:36.321+0800 [TRACE] vertex "provider[\"registry.terraform.io/elsudano/vmworkstation\"]": visit complete
+2021-11-03T15:25:36.321+0800 [TRACE] vertex "vmworkstation_vm.test_machine (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2021-11-03T15:25:36.321+0800 [TRACE] vertex "vmworkstation_vm.test_machine (expand)": expanding dynamic subgraph
+2021-11-03T15:25:36.321+0800 [TRACE] vertex "vmworkstation_vm.test_machine (expand)": entering dynamic subgraph
+2021-11-03T15:25:36.321+0800 [TRACE] vertex "vmworkstation_vm.test_machine": starting visit (*terraform.NodePlannableResource)
+2021-11-03T15:25:36.322+0800 [TRACE] vertex "vmworkstation_vm.test_machine": expanding dynamic subgraph
+2021-11-03T15:25:36.322+0800 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2021-11-03T15:25:36.322+0800 [TRACE] ResourceCountTransformer: adding vmworkstation_vm.test_machine as *terraform.NodePlannableResourceInstance
+2021-11-03T15:25:36.322+0800 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  vmworkstation_vm.test_machine - *terraform.NodePlannableResourceInstance
+  ------
+2021-11-03T15:25:36.322+0800 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2021-11-03T15:25:36.322+0800 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2021-11-03T15:25:36.322+0800 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021-11-03T15:25:36.322+0800 [DEBUG] Resource instance state not found for node "vmworkstation_vm.test_machine", instance vmworkstation_vm.test_machine
+2021-11-03T15:25:36.322+0800 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021-11-03T15:25:36.322+0800 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021-11-03T15:25:36.322+0800 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021-11-03T15:25:36.322+0800 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021-11-03T15:25:36.322+0800 [INFO]  ReferenceTransformer: reference not found: "var.Iname"
+2021-11-03T15:25:36.322+0800 [INFO]  ReferenceTransformer: reference not found: "var.vmws_resource_frontend_description"
+2021-11-03T15:25:36.322+0800 [INFO]  ReferenceTransformer: reference not found: "var.vmws_resource_frontend_memory"
+2021-11-03T15:25:36.322+0800 [INFO]  ReferenceTransformer: reference not found: "var.vmws_resource_frontend_path"
+2021-11-03T15:25:36.322+0800 [INFO]  ReferenceTransformer: reference not found: "var.vmws_resource_frontend_processors"
+2021-11-03T15:25:36.322+0800 [INFO]  ReferenceTransformer: reference not found: "var.vmws_resource_frontend_sourceid"
+2021-11-03T15:25:36.322+0800 [DEBUG] ReferenceTransformer: "vmworkstation_vm.test_machine" references: []
+2021-11-03T15:25:36.322+0800 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2021-11-03T15:25:36.322+0800 [TRACE] Executing graph transform *terraform.RootTransformer
+2021-11-03T15:25:36.322+0800 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2021-11-03T15:25:36.322+0800 [TRACE] vertex "vmworkstation_vm.test_machine": entering dynamic subgraph
+2021-11-03T15:25:36.322+0800 [TRACE] vertex "vmworkstation_vm.test_machine": starting visit (*terraform.NodePlannableResourceInstance)
+2021-11-03T15:25:36.322+0800 [TRACE] readResourceInstanceState: reading state for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.322+0800 [TRACE] readResourceInstanceState: no state present for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.322+0800 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState to prevRunState for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.322+0800 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState: removing state object for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.322+0800 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState to refreshState for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.322+0800 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState: removing state object for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.322+0800 [TRACE] NodeAbstractResourceInstance.refresh for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.322+0800 [DEBUG] refresh: vmworkstation_vm.test_machine: no state, so not refreshing
+2021-11-03T15:25:36.322+0800 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState to refreshState for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.322+0800 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState: removing state object for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.322+0800 [TRACE] Re-validating config for "vmworkstation_vm.test_machine"
+2021-11-03T15:25:36.322+0800 [TRACE] GRPCProvider: ValidateResourceConfig
+2021-11-03T15:25:36.322+0800 [TRACE] GRPCProvider: PlanResourceChange
+2021-11-03T15:25:36.323+0800 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState to workingState for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.323+0800 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState: writing state object for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.323+0800 [TRACE] writeChange: recorded Create change for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.323+0800 [TRACE] vertex "vmworkstation_vm.test_machine": visit complete
+2021-11-03T15:25:36.323+0800 [TRACE] vertex "vmworkstation_vm.test_machine": dynamic subgraph completed successfully
+2021-11-03T15:25:36.323+0800 [TRACE] vertex "vmworkstation_vm.test_machine": visit complete
+2021-11-03T15:25:36.323+0800 [TRACE] vertex "vmworkstation_vm.test_machine (expand)": dynamic subgraph completed successfully
+2021-11-03T15:25:36.323+0800 [TRACE] vertex "vmworkstation_vm.test_machine (expand)": visit complete
+2021-11-03T15:25:36.323+0800 [TRACE] vertex "output.instance_id": starting visit (*terraform.NodeApplyableOutput)
+2021-11-03T15:25:36.323+0800 [TRACE] vertex "provider[\"registry.terraform.io/elsudano/vmworkstation\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2021-11-03T15:25:36.323+0800 [TRACE] GRPCProvider: Close
+2021-11-03T15:25:36.323+0800 [TRACE] setValue: Saving Create change for output.instance_id in changeset
+2021-11-03T15:25:36.323+0800 [TRACE] setValue: Removing output.instance_id from state (it is now null)
+2021-11-03T15:25:36.323+0800 [TRACE] vertex "output.instance_id": visit complete
+2021-11-03T15:25:36.323+0800 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2021-11-03T15:25:36.323+0800 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2021-11-03T15:25:36.324+0800 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-11-03T15:25:36.325+0800 [DEBUG] provider: plugin process exited: path=/home/axe/workshop/terraform-provider-vmworkstation/terraform-provider-vmworkstation_v0.2.3 pid=14202
+2021-11-03T15:25:36.325+0800 [DEBUG] provider: plugin exited
+2021-11-03T15:25:36.325+0800 [TRACE] vertex "provider[\"registry.terraform.io/elsudano/vmworkstation\"] (close)": visit complete
+2021-11-03T15:25:36.325+0800 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2021-11-03T15:25:36.325+0800 [TRACE] vertex "root": visit complete
+2021-11-03T15:25:36.325+0800 [INFO]  backend/local: apply calling Apply
+2021-11-03T15:25:36.325+0800 [INFO]  terraform: building graph: GraphTypeApply
+2021-11-03T15:25:36.325+0800 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2021-11-03T15:25:36.325+0800 [TRACE] ConfigTransformer: Starting for path:
+2021-11-03T15:25:36.325+0800 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  ------
+2021-11-03T15:25:36.325+0800 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2021-11-03T15:25:36.325+0800 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  ------
+2021-11-03T15:25:36.325+0800 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2021-11-03T15:25:36.325+0800 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2021-11-03T15:25:36.325+0800 [TRACE] Executing graph transform *terraform.LocalTransformer
+2021-11-03T15:25:36.325+0800 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2021-11-03T15:25:36.325+0800 [TRACE] Executing graph transform *terraform.OutputTransformer
+2021-11-03T15:25:36.325+0800 [TRACE] OutputTransformer: adding instance_id as *terraform.NodeApplyableOutput
+2021-11-03T15:25:36.325+0800 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  output.instance_id - *terraform.NodeApplyableOutput
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  ------
+2021-11-03T15:25:36.325+0800 [TRACE] Executing graph transform *terraform.DiffTransformer
+2021-11-03T15:25:36.325+0800 [TRACE] DiffTransformer starting
+2021-11-03T15:25:36.325+0800 [TRACE] DiffTransformer: found Create change for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.325+0800 [TRACE] DiffTransformer: vmworkstation_vm.test_machine will be represented by vmworkstation_vm.test_machine
+2021-11-03T15:25:36.325+0800 [TRACE] DiffTransformer complete
+2021-11-03T15:25:36.325+0800 [TRACE] Completed graph transform *terraform.DiffTransformer with new graph:
+  output.instance_id - *terraform.NodeApplyableOutput
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine - *terraform.NodeApplyableResourceInstance
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  ------
+2021-11-03T15:25:36.325+0800 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021-11-03T15:25:36.325+0800 [DEBUG] Resource state not found for node "vmworkstation_vm.test_machine", instance vmworkstation_vm.test_machine
+2021-11-03T15:25:36.325+0800 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021-11-03T15:25:36.325+0800 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2021-11-03T15:25:36.325+0800 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2021-11-03T15:25:36.325+0800 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021-11-03T15:25:36.325+0800 [TRACE] AttachResourceConfigTransformer: attaching to "vmworkstation_vm.test_machine" (*terraform.NodeApplyableResourceInstance) config from main.tf:18,1-43
+2021-11-03T15:25:36.325+0800 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to vmworkstation_vm.test_machine
+2021-11-03T15:25:36.325+0800 [TRACE] AttachResourceConfigTransformer: attaching to "vmworkstation_vm.test_machine (expand)" (*terraform.nodeExpandApplyableResource) config from main.tf:18,1-43
+2021-11-03T15:25:36.326+0800 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to vmworkstation_vm.test_machine (expand)
+2021-11-03T15:25:36.326+0800 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021-11-03T15:25:36.326+0800 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021-11-03T15:25:36.326+0800 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021-11-03T15:25:36.326+0800 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/elsudano/vmworkstation\"]" provider configuration from main.tf:10,1-25
+2021-11-03T15:25:36.326+0800 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  output.instance_id - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine - *terraform.NodeApplyableResourceInstance
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  ------
+2021-11-03T15:25:36.326+0800 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021-11-03T15:25:36.326+0800 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021-11-03T15:25:36.326+0800 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021-11-03T15:25:36.326+0800 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/elsudano/vmworkstation"] serving vmworkstation_vm.test_machine (expand)
+2021-11-03T15:25:36.326+0800 [DEBUG] ProviderTransformer: "vmworkstation_vm.test_machine (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/elsudano/vmworkstation"]
+2021-11-03T15:25:36.326+0800 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/elsudano/vmworkstation"] serving vmworkstation_vm.test_machine
+2021-11-03T15:25:36.326+0800 [DEBUG] ProviderTransformer: "vmworkstation_vm.test_machine" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/elsudano/vmworkstation"]
+2021-11-03T15:25:36.326+0800 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  output.instance_id - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine - *terraform.NodeApplyableResourceInstance
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+  ------
+2021-11-03T15:25:36.326+0800 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021-11-03T15:25:36.326+0800 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2021-11-03T15:25:36.326+0800 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  output.instance_id - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine - *terraform.NodeApplyableResourceInstance
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+  ------
+2021-11-03T15:25:36.326+0800 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2021-11-03T15:25:36.326+0800 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2021-11-03T15:25:36.327+0800 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2021-11-03T15:25:36.327+0800 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/elsudano/vmworkstation"]
+2021-11-03T15:25:36.327+0800 [TRACE] AttachSchemaTransformer: attaching resource schema to vmworkstation_vm.test_machine (expand)
+2021-11-03T15:25:36.327+0800 [TRACE] AttachSchemaTransformer: attaching resource schema to vmworkstation_vm.test_machine
+2021-11-03T15:25:36.327+0800 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2021-11-03T15:25:36.327+0800 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2021-11-03T15:25:36.327+0800 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2021-11-03T15:25:36.327+0800 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021-11-03T15:25:36.327+0800 [DEBUG] ReferenceTransformer: "var.vmws_resource_frontend_processors" references: []
+2021-11-03T15:25:36.327+0800 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/elsudano/vmworkstation\"]" references: [var.vmws_user var.vmws_password var.vmws_url]
+2021-11-03T15:25:36.327+0800 [DEBUG] ReferenceTransformer: "var.vmws_resource_frontend_memory" references: []
+2021-11-03T15:25:36.327+0800 [DEBUG] ReferenceTransformer: "var.vmws_user" references: []
+2021-11-03T15:25:36.327+0800 [DEBUG] ReferenceTransformer: "var.vmws_url" references: []
+2021-11-03T15:25:36.327+0800 [DEBUG] ReferenceTransformer: "var.Iname" references: []
+2021-11-03T15:25:36.327+0800 [DEBUG] ReferenceTransformer: "var.vmws_resource_frontend_sourceid" references: []
+2021-11-03T15:25:36.327+0800 [DEBUG] ReferenceTransformer: "output.instance_id" references: [vmworkstation_vm.test_machine vmworkstation_vm.test_machine vmworkstation_vm.test_machine (expand)]
+2021-11-03T15:25:36.327+0800 [DEBUG] ReferenceTransformer: "vmworkstation_vm.test_machine" references: [var.vmws_resource_frontend_memory var.vmws_resource_frontend_path var.vmws_resource_frontend_processors var.vmws_resource_frontend_sourceid var.Iname var.vmws_resource_frontend_description]
+2021-11-03T15:25:36.327+0800 [DEBUG] ReferenceTransformer: "vmworkstation_vm.test_machine (expand)" references: []
+2021-11-03T15:25:36.327+0800 [DEBUG] ReferenceTransformer: "var.vmws_resource_frontend_path" references: []
+2021-11-03T15:25:36.327+0800 [DEBUG] ReferenceTransformer: "var.vmws_resource_frontend_description" references: []
+2021-11-03T15:25:36.327+0800 [DEBUG] ReferenceTransformer: "var.vmws_password" references: []
+2021-11-03T15:25:36.328+0800 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  output.instance_id - *terraform.NodeApplyableOutput
+    vmworkstation_vm.test_machine - *terraform.NodeApplyableResourceInstance
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine - *terraform.NodeApplyableResourceInstance
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+  ------
+2021-11-03T15:25:36.328+0800 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2021-11-03T15:25:36.328+0800 [TRACE] AttachDependenciesTransformer: vmworkstation_vm.test_machine depends on []
+2021-11-03T15:25:36.328+0800 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2021-11-03T15:25:36.328+0800 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2021-11-03T15:25:36.328+0800 [TRACE] ForcedCBDTransformer: "vmworkstation_vm.test_machine" (*terraform.NodeApplyableResourceInstance) has no CBD descendent, so skipping
+2021-11-03T15:25:36.328+0800 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2021-11-03T15:25:36.328+0800 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2021-11-03T15:25:36.328+0800 [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer (no changes)
+2021-11-03T15:25:36.328+0800 [TRACE] Executing graph transform *terraform.CBDEdgeTransformer
+2021-11-03T15:25:36.328+0800 [TRACE] Completed graph transform *terraform.CBDEdgeTransformer (no changes)
+2021-11-03T15:25:36.328+0800 [TRACE] Executing graph transform *terraform.pruneUnusedNodesTransformer
+2021-11-03T15:25:36.328+0800 [TRACE] Completed graph transform *terraform.pruneUnusedNodesTransformer (no changes)
+2021-11-03T15:25:36.328+0800 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021-11-03T15:25:36.328+0800 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021-11-03T15:25:36.328+0800 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2021-11-03T15:25:36.328+0800 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.instance_id - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+    vmworkstation_vm.test_machine - *terraform.NodeApplyableResourceInstance
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  output.instance_id - *terraform.NodeApplyableOutput
+    vmworkstation_vm.test_machine - *terraform.NodeApplyableResourceInstance
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine - *terraform.NodeApplyableResourceInstance
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+  ------
+2021-11-03T15:25:36.328+0800 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2021-11-03T15:25:36.328+0800 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.instance_id - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+    vmworkstation_vm.test_machine - *terraform.NodeApplyableResourceInstance
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  output.instance_id - *terraform.NodeApplyableOutput
+    vmworkstation_vm.test_machine - *terraform.NodeApplyableResourceInstance
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+  provider["registry.terraform.io/elsudano/vmworkstation"] (close) - *terraform.graphNodeCloseProvider
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    vmworkstation_vm.test_machine - *terraform.NodeApplyableResourceInstance
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine - *terraform.NodeApplyableResourceInstance
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+  ------
+2021-11-03T15:25:36.328+0800 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021-11-03T15:25:36.329+0800 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.instance_id - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+    vmworkstation_vm.test_machine - *terraform.NodeApplyableResourceInstance
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  output.instance_id - *terraform.NodeApplyableOutput
+    vmworkstation_vm.test_machine - *terraform.NodeApplyableResourceInstance
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+  provider["registry.terraform.io/elsudano/vmworkstation"] (close) - *terraform.graphNodeCloseProvider
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    vmworkstation_vm.test_machine - *terraform.NodeApplyableResourceInstance
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/elsudano/vmworkstation"] (close) - *terraform.graphNodeCloseProvider
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine - *terraform.NodeApplyableResourceInstance
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+  ------
+2021-11-03T15:25:36.329+0800 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2021-11-03T15:25:36.329+0800 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.instance_id - *terraform.NodeApplyableOutput
+  output.instance_id - *terraform.NodeApplyableOutput
+    vmworkstation_vm.test_machine - *terraform.NodeApplyableResourceInstance
+  provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+    var.vmws_password - *terraform.NodeRootVariable
+    var.vmws_url - *terraform.NodeRootVariable
+    var.vmws_user - *terraform.NodeRootVariable
+  provider["registry.terraform.io/elsudano/vmworkstation"] (close) - *terraform.graphNodeCloseProvider
+    vmworkstation_vm.test_machine - *terraform.NodeApplyableResourceInstance
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/elsudano/vmworkstation"] (close) - *terraform.graphNodeCloseProvider
+  var.Iname - *terraform.NodeRootVariable
+  var.vmws_password - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+  var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+  var.vmws_url - *terraform.NodeRootVariable
+  var.vmws_user - *terraform.NodeRootVariable
+  vmworkstation_vm.test_machine - *terraform.NodeApplyableResourceInstance
+    var.Iname - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_description - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_memory - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_path - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_processors - *terraform.NodeRootVariable
+    var.vmws_resource_frontend_sourceid - *terraform.NodeRootVariable
+    vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+  vmworkstation_vm.test_machine (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/elsudano/vmworkstation"] - *terraform.NodeApplyableProvider
+  ------
+2021-11-03T15:25:36.329+0800 [DEBUG] Starting graph walk: walkApply
+2021-11-03T15:25:36.329+0800 [TRACE] vertex "var.vmws_resource_frontend_description": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.329+0800 [TRACE] vertex "var.vmws_resource_frontend_description": visit complete
+2021-11-03T15:25:36.329+0800 [TRACE] vertex "var.Iname": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.329+0800 [TRACE] vertex "var.vmws_resource_frontend_sourceid": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.329+0800 [TRACE] vertex "var.vmws_url": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.329+0800 [TRACE] vertex "var.vmws_url": visit complete
+2021-11-03T15:25:36.329+0800 [TRACE] vertex "var.Iname": visit complete
+2021-11-03T15:25:36.329+0800 [TRACE] vertex "var.vmws_user": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.329+0800 [TRACE] vertex "var.vmws_user": visit complete
+2021-11-03T15:25:36.329+0800 [TRACE] vertex "var.vmws_resource_frontend_memory": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.329+0800 [TRACE] vertex "var.vmws_resource_frontend_memory": visit complete
+2021-11-03T15:25:36.329+0800 [TRACE] vertex "var.vmws_resource_frontend_processors": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.329+0800 [TRACE] vertex "var.vmws_resource_frontend_processors": visit complete
+2021-11-03T15:25:36.329+0800 [TRACE] vertex "var.vmws_resource_frontend_path": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.329+0800 [TRACE] vertex "var.vmws_resource_frontend_path": visit complete
+2021-11-03T15:25:36.329+0800 [TRACE] vertex "var.vmws_password": starting visit (*terraform.NodeRootVariable)
+2021-11-03T15:25:36.329+0800 [TRACE] vertex "var.vmws_password": visit complete
+2021-11-03T15:25:36.329+0800 [TRACE] vertex "var.vmws_resource_frontend_sourceid": visit complete
+2021-11-03T15:25:36.329+0800 [TRACE] vertex "provider[\"registry.terraform.io/elsudano/vmworkstation\"]": starting visit (*terraform.NodeApplyableProvider)
+2021-11-03T15:25:36.329+0800 [DEBUG] created provider logger: level=trace
+2021-11-03T15:25:36.330+0800 [INFO]  provider: configuring client automatic mTLS
+2021-11-03T15:25:36.377+0800 [DEBUG] provider: starting plugin: path=/home/axe/workshop/terraform-provider-vmworkstation/terraform-provider-vmworkstation_v0.2.3 args=[/home/axe/workshop/terraform-provider-vmworkstation/terraform-provider-vmworkstation_v0.2.3]
+2021-11-03T15:25:36.377+0800 [DEBUG] provider: plugin started: path=/home/axe/workshop/terraform-provider-vmworkstation/terraform-provider-vmworkstation_v0.2.3 pid=14216
+2021-11-03T15:25:36.377+0800 [DEBUG] provider: waiting for RPC address: path=/home/axe/workshop/terraform-provider-vmworkstation/terraform-provider-vmworkstation_v0.2.3
+2021-11-03T15:25:36.380+0800 [INFO]  provider.terraform-provider-vmworkstation_v0.2.3: configuring server automatic mTLS: timestamp=2021-11-03T15:25:36.380+0800
+2021-11-03T15:25:36.410+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: plugin address: address=/tmp/plugin120346061 network=unix timestamp=2021-11-03T15:25:36.410+0800
+2021-11-03T15:25:36.410+0800 [DEBUG] provider: using plugin: version=5
+2021-11-03T15:25:36.459+0800 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/elsudano/vmworkstation\"]" provider for provider["registry.terraform.io/elsudano/vmworkstation"]
+2021-11-03T15:25:36.459+0800 [TRACE] provider.stdio: waiting for stdio data
+2021-11-03T15:25:36.459+0800 [TRACE] buildProviderConfig for provider["registry.terraform.io/elsudano/vmworkstation"]: using explicit config only
+2021-11-03T15:25:36.459+0800 [TRACE] GRPCProvider: GetProviderSchema
+2021-11-03T15:25:36.460+0800 [TRACE] GRPCProvider: ValidateProviderConfig
+2021-11-03T15:25:36.460+0800 [TRACE] GRPCProvider: ConfigureProvider
+2021-11-03T15:25:36.460+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [WSAPICLI] Fi: wsapiclient.go Fu: ConfigCli Obj:Variables "https://127.0.0.1:8697/api", "admin", "Huhj1234@", true
+2021-11-03T15:25:36.460+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [WSAPICLI] Fi: wsapiclient.go Fu: ConfigCli Obj:&url.URL{Scheme:"https", Opaque:"", User:(*url.Userinfo)(nil), Host:"127.0.0.1:8697", Path:"/api", RawPath:"", ForceQuery:false, RawQuery:"", Fragment:""}
+2021-11-03T15:25:36.460+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [WSAPICLI] Fi: wsapiclient.go Fu: ConfigCli Obj:"admin"
+2021-11-03T15:25:36.460+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [WSAPICLI] Fi: wsapiclient.go Fu: ConfigCli Obj:"Huhj1234@"
+2021-11-03T15:25:36.460+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [WSAPICLI] Fi: wsapiclient.go Fu: ConfigCli Obj:true
+2021-11-03T15:25:36.460+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [WSAPICLI] Fi: wsapiclient.go Fu: ConfigCli Obj:true
+2021-11-03T15:25:36.460+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [VMWS] Fi: config.go Fu: Client Obj: client before &wsapiclient.Client{Client:(*http.Client)(0xc0001da540), BaseURL:(*url.URL)(0xc000208400), User:"admin", Password:"Huhj1234@", InsecureFlag:true, Debug:true}
+2021-11-03T15:25:36.460+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [VMWS] Fi: provider.go Fu: providerConfigure Obj:&schema.ResourceData{schema:map[string]*schema.Schema{"debug":(*schema.Schema)(0xc000206400), "https":(*schema.Schema)(0xc000206300), "password":(*schema.Schema)(0xc000206100), "url":(*schema.Schema)(0xc000206200), "user":(*schema.Schema)(0xc000206000)}, config:(*terraform.ResourceConfig)(nil), state:(*terraform.InstanceState)(nil), diff:(*terraform.InstanceDiff)(0xc000187660), meta:map[string]interface {}(nil), timeouts:(*schema.ResourceTimeout)(nil), providerMeta:cty.Value{ty:cty.Type{typeImpl:cty.typeImpl(nil)}, v:interface {}(nil)}, multiReader:(*schema.MultiLevelFieldReader)(0xc000187760), setWriter:(*schema.MapFieldWriter)(0xc0001876e0), newState:(*terraform.InstanceState)(0xc0000e44d0), partial:false, partialMap:map[string]struct {}(nil), once:sync.Once{done:0x1, m:sync.Mutex{state:0, sema:0x0}}, isNew:false, panicOnError:false}
+2021-11-03T15:25:36.460+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [VMWS] Fi: provider.go Fu: providerConfigure Obj:&vmworkstation.Config{User:"admin", Password:"Huhj1234@", URL:"https://127.0.0.1:8697/api", InsecureFlag:true, Debug:true}
+2021-11-03T15:25:36.460+0800 [TRACE] vertex "provider[\"registry.terraform.io/elsudano/vmworkstation\"]": visit complete
+2021-11-03T15:25:36.460+0800 [TRACE] vertex "vmworkstation_vm.test_machine (expand)": starting visit (*terraform.nodeExpandApplyableResource)
+2021-11-03T15:25:36.460+0800 [TRACE] vertex "vmworkstation_vm.test_machine (expand)": expanding dynamic subgraph
+2021-11-03T15:25:36.460+0800 [TRACE] vertex "vmworkstation_vm.test_machine (expand)": entering dynamic subgraph
+2021-11-03T15:25:36.461+0800 [TRACE] vertex "vmworkstation_vm.test_machine": starting visit (*terraform.NodeApplyableResource)
+2021-11-03T15:25:36.461+0800 [TRACE] vertex "vmworkstation_vm.test_machine": visit complete
+2021-11-03T15:25:36.461+0800 [TRACE] vertex "vmworkstation_vm.test_machine (expand)": dynamic subgraph completed successfully
+2021-11-03T15:25:36.461+0800 [TRACE] vertex "vmworkstation_vm.test_machine (expand)": visit complete
+2021-11-03T15:25:36.461+0800 [TRACE] vertex "vmworkstation_vm.test_machine": starting visit (*terraform.NodeApplyableResourceInstance)
+2021-11-03T15:25:36.461+0800 [TRACE] readDiff: Read Create change from plan for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.461+0800 [TRACE] readResourceInstanceState: reading state for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.461+0800 [TRACE] readResourceInstanceState: no state present for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.461+0800 [TRACE] readDiff: Read Create change from plan for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.461+0800 [TRACE] Re-validating config for "vmworkstation_vm.test_machine"
+2021-11-03T15:25:36.461+0800 [TRACE] GRPCProvider: ValidateResourceConfig
+2021-11-03T15:25:36.461+0800 [TRACE] GRPCProvider: PlanResourceChange
+2021-11-03T15:25:36.462+0800 [TRACE] checkPlannedChange: Verifying that actual change (action Create) matches planned change (action Create)
+2021-11-03T15:25:36.462+0800 [TRACE] readResourceInstanceState: reading state for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.462+0800 [TRACE] readResourceInstanceState: no state present for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.462+0800 [INFO]  Starting apply for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.462+0800 [DEBUG] vmworkstation_vm.test_machine: applying the planned Create change
+2021-11-03T15:25:36.462+0800 [TRACE] GRPCProvider: ApplyResourceChange
+2021-11-03T15:25:36.463+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [VMWS] Fi: resource_vmworkstation_vm.go Fu: resourceVMWSVmCreate Ob:
+2021-11-03T15:25:36.463+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 	 sourceid: "U8IR2EGF50P837I1OU919OC1U9MFB8TT"
+2021-11-03T15:25:36.463+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 	 denomination: "vm-tf1"
+2021-11-03T15:25:36.463+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 	 description: "terraform vm"
+2021-11-03T15:25:36.463+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 	 path: "/home/axe/vmware/vm00"
+2021-11-03T15:25:36.463+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 	 processors: 1
+2021-11-03T15:25:36.463+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 	 memory: 1024
+2021-11-03T15:25:36.463+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [WSAPICLI] Fi: wsapivm.go Fu: CreateVM Obj:Request []byte{0x7b, 0x22, 0x6e, 0x61, 0x6d, 0x65, 0x22, 0x3a, 0x22, 0x76, 0x6d, 0x2d, 0x74, 0x66, 0x31, 0x22, 0x2c, 0x22, 0x70, 0x61, 0x72, 0x65, 0x6e, 0x74, 0x49, 0x64, 0x22, 0x3a, 0x22, 0x55, 0x38, 0x49, 0x52, 0x32, 0x45, 0x47, 0x46, 0x35, 0x30, 0x50, 0x38, 0x33, 0x37, 0x49, 0x31, 0x4f, 0x55, 0x39, 0x31, 0x39, 0x4f, 0x43, 0x31, 0x55, 0x39, 0x4d, 0x46, 0x42, 0x38, 0x54, 0x54, 0x22, 0x7d}
+2021-11-03T15:25:36.463+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [WSAPICLI] Fi: wsapivm.go Fu: CreateVM Obj:Request Body "{\"name\":\"vm-tf1\",\"parentId\":\"U8IR2EGF50P837I1OU919OC1U9MFB8TT\"}"
+2021-11-03T15:25:36.463+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [WSAPICLI] Fi: wsapiclient.go Fu: requestPath Obj:"https://127.0.0.1:8697/api/vms"
+2021-11-03T15:25:36.463+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [WSAPICLI] Fi: wsapiclient.go Fu: httpRequest Obj:buffer "{\"name\":\"vm-tf1\",\"parentId\":\"U8IR2EGF50P837I1OU919OC1U9MFB8TT\"}"
+2021-11-03T15:25:36.463+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [WSAPICLI] Fi: wsapiclient.go Fu: httpRequest Obj: Rrequest before that run &http.Request{Method:"POST", URL:(*url.URL)(0xc000208680), Proto:"HTTP/1.1", ProtoMajor:1, ProtoMinor:1, Header:http.Header{"Authorization":[]string{"Basic YWRtaW46SHVoajEyMzRA"}, "Content-Type":[]string{"application/vnd.vmware.vmw.rest-v1+json"}}, Body:ioutil.nopCloser{Reader:(*bytes.Buffer)(0xc0001c7830)}, GetBody:(func() (io.ReadCloser, error))(0x6f01c0), ContentLength:63, TransferEncoding:[]string(nil), Close:false, Host:"127.0.0.1:8697", Form:url.Values(nil), PostForm:url.Values(nil), MultipartForm:(*multipart.Form)(nil), Trailer:http.Header(nil), RemoteAddr:"", RequestURI:"", TLS:(*tls.ConnectionState)(nil), Cancel:(<-chan struct {})(nil), Response:(*http.Response)(nil), ctx:(*context.emptyCtx)(0xc000036170)}
+2021-11-03T15:25:36.463+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 2021/11/03 15:25:36 [WSAPICLI][ERROR] Fi: wsapiclient.go Fu: httpRequest Obj:response error &url.Error{Op:"Post", URL:"https://127.0.0.1:8697/api/vms", Err:(*net.OpError)(0xc000428be0)}
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: PANIC: runtime error: invalid memory address or nil pointer dereference
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: [signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x9bc838]
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: goroutine 12 [running]:
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: github.com/elsudano/terraform-provider-vmworkstation/vmworkstation.resourceVMWSVmCreate(0xc0000e25a0, 0xcb7720, 0xc0004ba700, 0x2, 0x1404240)
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 	/home/axe/workshop/terraform-provider-vmworkstation/vmworkstation/resource_vmworkstation_vm.go:82 +0x588
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: github.com/hashicorp/terraform/helper/schema.(*Resource).Apply(0xc000208000, 0xc0000e56c0, 0xc0001d8ec0, 0xcb7720, 0xc0004ba700, 0x1, 0x0, 0x0)
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 	/home/axe/go/pkg/mod/github.com/hashicorp/terraform@v0.13.3/helper/schema/resource.go:308 +0x3a7
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: github.com/hashicorp/terraform/helper/schema.(*Provider).Apply(0xc000208180, 0xc0002dd9b8, 0xc0000e56c0, 0xc0001d8ec0, 0xc00000e520, 0xe813c0, 0xc00000e520)
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 	/home/axe/go/pkg/mod/github.com/hashicorp/terraform@v0.13.3/helper/schema/provider.go:297 +0x99
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: github.com/hashicorp/terraform/helper/plugin.(*GRPCProviderServer).ApplyResourceChange(0xc0001ce038, 0xe80840, 0xc0001dbe60, 0xc0000e5500, 0xc0001ce038, 0xc0001dbe60, 0xc000422b30)
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 	/home/axe/go/pkg/mod/github.com/hashicorp/terraform@v0.13.3/helper/plugin/grpc_provider.go:923 +0x8fa
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: github.com/hashicorp/terraform/internal/tfplugin5._Provider_ApplyResourceChange_Handler(0xce4f20, 0xc0001ce038, 0xe80840, 0xc0001dbe60, 0xc000464ae0, 0x0, 0xe80840, 0xc0001dbe60, 0xc0000b69a0, 0x15e)
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 	/home/axe/go/pkg/mod/github.com/hashicorp/terraform@v0.13.3/internal/tfplugin5/tfplugin5.pb.go:3303 +0x217
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: google.golang.org/grpc.(*Server).processUnaryRPC(0xc000482a80, 0xe89e20, 0xc00046ea80, 0xc00010bc00, 0xc0001c70e0, 0x13d9820, 0x0, 0x0, 0x0)
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 	/home/axe/go/pkg/mod/google.golang.org/grpc@v1.27.1/server.go:1024 +0x4f4
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: google.golang.org/grpc.(*Server).handleStream(0xc000482a80, 0xe89e20, 0xc00046ea80, 0xc00010bc00, 0x0)
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 	/home/axe/go/pkg/mod/google.golang.org/grpc@v1.27.1/server.go:1313 +0xd97
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: google.golang.org/grpc.(*Server).serveStreams.func1.1(0xc0000365e0, 0xc000482a80, 0xe89e20, 0xc00046ea80, 0xc00010bc00)
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 	/home/axe/go/pkg/mod/google.golang.org/grpc@v1.27.1/server.go:722 +0xbb
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: created by google.golang.org/grpc.(*Server).serveStreams.func1
+2021-11-03T15:25:36.465+0800 [DEBUG] provider.terraform-provider-vmworkstation_v0.2.3: 	/home/axe/go/pkg/mod/google.golang.org/grpc@v1.27.1/server.go:720 +0xa1
+2021-11-03T15:25:36.467+0800 [DEBUG] provider: plugin process exited: path=/home/axe/workshop/terraform-provider-vmworkstation/terraform-provider-vmworkstation_v0.2.3 pid=14216 error="exit status 2"
+2021-11-03T15:25:36.467+0800 [ERROR] plugin.(*GRPCProvider).ApplyResourceChange: error="rpc error: code = Unavailable desc = transport is closing"
+2021-11-03T15:25:36.467+0800 [TRACE] maybeTainted: vmworkstation_vm.test_machine encountered an error during creation, so it is now marked as tainted
+2021-11-03T15:25:36.467+0800 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState to workingState for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.467+0800 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState: removing state object for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.467+0800 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-11-03T15:25:36.467+0800 [TRACE] evalApplyProvisioners: vmworkstation_vm.test_machine is tainted, so skipping provisioning
+2021-11-03T15:25:36.467+0800 [TRACE] maybeTainted: vmworkstation_vm.test_machine was already tainted, so nothing to do
+2021-11-03T15:25:36.467+0800 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState to workingState for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.467+0800 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState: removing state object for vmworkstation_vm.test_machine
+2021-11-03T15:25:36.467+0800 [TRACE] statemgr.Filesystem: not making a backup, because the new snapshot is identical to the old
+2021-11-03T15:25:36.467+0800 [TRACE] statemgr.Filesystem: no state changes since last snapshot
+2021-11-03T15:25:36.467+0800 [TRACE] statemgr.Filesystem: writing snapshot at terraform.tfstate
+2021-11-03T15:25:36.511+0800 [TRACE] vertex "vmworkstation_vm.test_machine": visit complete
+2021-11-03T15:25:36.511+0800 [TRACE] dag/walk: upstream of "provider[\"registry.terraform.io/elsudano/vmworkstation\"] (close)" errored, so skipping
+2021-11-03T15:25:36.511+0800 [TRACE] dag/walk: upstream of "output.instance_id" errored, so skipping
+2021-11-03T15:25:36.511+0800 [TRACE] dag/walk: upstream of "meta.count-boundary (EachMode fixup)" errored, so skipping
+2021-11-03T15:25:36.511+0800 [TRACE] dag/walk: upstream of "root" errored, so skipping
+2021-11-03T15:25:36.511+0800 [TRACE] statemgr.Filesystem: not making a backup, because the new snapshot is identical to the old
+2021-11-03T15:25:36.511+0800 [TRACE] statemgr.Filesystem: no state changes since last snapshot
+2021-11-03T15:25:36.511+0800 [TRACE] statemgr.Filesystem: writing snapshot at terraform.tfstate
+2021-11-03T15:25:36.545+0800 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2021-11-03T15:25:36.545+0800 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
+2021-11-03T15:25:36.545+0800 [DEBUG] provider: plugin exited

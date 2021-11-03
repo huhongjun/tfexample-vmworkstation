@@ -1,0 +1,16 @@
+provider_installation {
+
+  # Use /home/axe/workshop/terraform-provider-vmworkstation as an overridden package directory
+  # for the elsudano/vmworkstation provider. This disables the version and checksum
+  # verifications for this provider and forces Terraform to look for the
+  # elsudano/vmworkstation provider plugin in the given directory.
+  dev_overrides {
+    "elsudano/vmworkstation" = "/home/axe/workshop/terraform-provider-vmworkstation"
+
+  }
+
+  # For all other providers, install them directly from their origin provider
+  # registries as normal. If you omit this, Terraform will _only_ use
+  # the dev_overrides block, and so no other providers will be available.
+  direct {}
+}
